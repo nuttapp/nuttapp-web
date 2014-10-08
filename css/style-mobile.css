@@ -377,7 +377,7 @@
 
 	#titleBar
 	{
-		background-color: rgba(21,38,23,0.8);
+		background-color: rgba(38, 60, 107, 0.8);
 		background-image: url('images/overlay.png');
 	}
 
@@ -418,7 +418,7 @@
 				position: absolute;
 				left: 0;
 				top: 0;
-				background: #b1ddab;
+				background: #839BD5;
 				width: 44px;
 				height: 44px;
 				content: '\f0c9';
