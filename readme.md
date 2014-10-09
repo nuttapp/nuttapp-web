@@ -23,4 +23,13 @@ Set GID so that, so that all new files and directories created under /data are o
 sudo chmod 2775 /data
 ```
 
+install nginx
+```
+sudo apt-get install nginx-extras
+```
 
+configure nginx to hide it's header
+```
+server_tokes: off
+more_set_headers 'Server: My Very Own Server ;)';
+```
