@@ -225,7 +225,8 @@
 	{
 		border-top-width: 35px;
 		border-bottom-width: 10px;
-	}
+		position: relative;
+}
 	
 /*********************************************************************************/
 /* Header                                                                        */
