@@ -805,6 +805,42 @@
 				border-color: rgba(97, 103, 99, 1.0);
 			}
 
+/*********************************************************************************/
+/* Article Banner                                                                        */
+/*********************************************************************************/
+	#article-banner-wrapper
+	{
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#article-banner
+	{
+		position: relative;
+		text-align: center;
+		margin: 0;
+	}
+
+    #article-banner h2
+    {
+        font-size: 3.5em; 
+        text-transform: none;
+        color: rgba(251,251,251,1);
+        margin: 0 0 0.35em 0;
+    }
+    
+    #article-banner p
+    {
+        display: block;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 300;
+        font-size: 1.25em;
+        text-transform: none;
+        color: rgba(240,240,240,1);
+        margin: 0 0 1.25em 0;
+    }
 
 /*********************************************************************************/
 /* Main                                                                          */
