@@ -1,0 +1,24 @@
+{
+  "name": "nuttapp-web",
+  "description": "Nuttapp website",
+  "version": "0.0.1",
+  "main": "home.html",
+  "keywords": [
+    "nuttapp",
+    "nuttapps"
+  ],
+  "authors": [
+    "Greg"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.nuttapp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
