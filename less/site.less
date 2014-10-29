@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Open+Sans+Condensed:700");
 @import "../vendor/bootstrap/less/variables.less";
 
 body {
@@ -33,9 +33,14 @@ Navbar
 /*
 Banner - top full width image
 */
+
+@overlay-image:     url('images/overlay.png');
+@banner-image:      url('../images/banner.jpg');
+@highlight-image:   url('images/highlight.png');
+
 #banner-wrapper {
     position: relative;
-    background-image:			url('images/overlay.png'),	url('images/overlay.png'),	url('../images/banner.jpg');
+    background-image:			@overlay-image,	            @overlay-image,           	@banner-image;
     background-position:		top left,					top left,					center center;
     background-repeat:			repeat,						repeat,						no-repeat;
     background-size:			auto,						auto,						cover;
@@ -59,7 +64,7 @@ Banner - top full width image
 {
     position: relative;
     background-color:		rgba(21,28,23,0.85);
-    background-image:		url('images/overlay.png'),	url('images/highlight.png');
+    background-image:		@overlay-image,	            @highlight-image;
     background-position:	top left,					center center;
     background-size:		auto,						100% 250%;
     background-repeat:		repeat,						no-repeat;
