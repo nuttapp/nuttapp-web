@@ -36,6 +36,13 @@ h2.major
     font-size: 1.65em;
     text-align: center;
     margin-top: 2.5em;
+
+    @media screen {
+        @media (max-width: @screen-xs-max) {
+            margin-top: 1.5em;
+            font-size: 1.25em;
+        }
+    }
 }
 
 h2.major > span
