@@ -1,10 +1,51 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Open+Sans+Condensed:700");
 @import "../vendor/bootstrap/less/variables.less";
 
+/*
+Additional base css. See vendor/bootstrap/less/variables.less for the rest
+*/
+
 body {
-  // min-height: 2000px;
+  min-height: 2000px;
   // Top padding is b/c of fixed navbar
   // padding-top: 70px;
+}
+
+footer {
+    text-align: center;
+}
+
+body,input,textarea,select
+{
+    font-weight: 400;
+    font-size: 11.5pt;
+    line-height: 2em;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    text-transform: uppercase;
+}
+
+/*
+Horizontal header for sections
+*/
+h2.major
+{
+    position: relative;
+    border-top: solid 5px #e7eae8;
+    font-size: 1.65em;
+    text-align: center;
+}
+
+h2.major > span
+{
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    top: -0.775em;
+    padding: 0 1.5em 0 1.5em;
+    background: @body-bg;
 }
 
 /*
@@ -45,7 +86,8 @@ Banner - top full width image
     background-repeat:			repeat,						repeat,						no-repeat;
     background-size:			auto,						auto,						cover;
     z-index: 1;
-    margin-top: 2em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
 
     @media screen {
         @media (max-width: @screen-xs-max) {
