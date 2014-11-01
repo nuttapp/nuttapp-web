@@ -1,59 +1,33 @@
 <!DOCTYPE HTML>
-<!--
-TXT by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
   <head>
-    <title>NuttApp</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-55854576-1', 'auto');
-      ga('require', 'displayfeatures');
-      ga('send', 'pageview');
-    </script>
-    <noscript>
-      <link rel="stylesheet" href="css/skel.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-desktop.css" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
-  <body class="homepage">
+  <body>
+    <div class="navbar navbar-default" role="navigation" style="background-image: url('css/images/overlay.png')">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>        
+        </button>
+        <!-- <a class="navbar&#45;brand" href="#">Project name</a> -->
+      </div>
 
-    <!-- Header -->
-    <header id="header">
-      <!-- <div class="logo container"> -->
-      <!--   <div> -->
-      <!--     <h1><a href="index.html" id="logo">nuttap.com</a></h1> -->
-      <!--     <p></p> -->
-      <!--   </div> -->
-      <!-- </div> -->
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav" class="skel-layers-fixed">
-      <ul>
-        <li class="current"><a href="home.html">Home</a></li>
-        <!-- <li><a href="#">Projects</a></li> -->
-        <li><a href="blog.html">Blog</a></li>
-        <!-- <li><a href="#">About</a></li> -->
-      </ul>
-    </nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="home.html">HOME</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+        </ul>
+      </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.navbar-->
 
     <!-- Banner -->
     <div id="banner-wrapper">
@@ -64,46 +38,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       </section>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="container">
-      <div class="row double">
-        <div class="12u">
-          <!-- About -->
-          <section>
-            <h2 class="major"><span>What's this site?</span></h2>
-            <p>
-              A place for fun, learning, laughter and love.<br/>
-              An attempt to resuscitate <strong>creative spirits</strong> that have been sidelined for too damn long.
-            </p>
-          </section>
-        </div>
+    <footer class="container-fluid">
+      <section>
+        <h2 class="major"><span>What's this site?</span></h2>
+        <p>
+          A place where ridiculous ideas can be exorcised.
+        </p>
+      </section>
+      <section>
+        <h2 class="major"><span>Elsewhere</span></h2>
+        <a class="fa fa-github fa-3x social-link" href="http://github.com/nuttapp"></a>
+        <a class="fa fa-twitter fa-3x social-link" href="http://twitter.com/nuttapp"></a>
+      </section>
+      <div class="attribution">
+          Design by <a href="http://html5up.net">HTML5 UP</a>
       </div>
-      <div class="row double">
-        <div class="12u">
-
-          <!-- Contact -->
-          <section>
-            <h2 class="major"><span>On the Internet</span></h2>
-            <ul class="contact">
-              <!-- <li><a class="icon fa&#45;facebook" href="#"><span class="label">Facebook</span></a></li> -->
-              <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-              <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-              <!-- <li><a class="icon fa&#45;dribbble" href="#"><span class="label">Dribbble</span></a></li> -->
-              <!-- <li><a class="icon fa&#45;google&#45;plus" href="#"><span class="label">Google+</span></a></li> -->
-            </ul>
-          </section>
-
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul class="menu">
-          <li>Template designed by: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </div>
-
-    </footer>
-
+    </footer> <!-- /footer -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

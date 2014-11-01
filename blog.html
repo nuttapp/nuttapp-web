@@ -1,202 +1,92 @@
 <!DOCTYPE HTML>
-<!--
-TXT by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
   <head>
-    <title>NuttApp Blog</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-55854576-1', 'auto');
-      ga('require', 'displayfeatures');
-      ga('send', 'pageview');
-    </script>
-    <noscript>
-      <link rel="stylesheet" href="css/skel.css" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="stylesheet" href="css/style-desktop.css" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700|Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-
-    <!-- Header -->
-    <header id="header">
-      <!--  <div class="logo container"> -->
-      <!--   <div> -->
-      <!--     <h1><a href="index.html" id="logo">TXT</a></h1> -->
-      <!--     <p>A responsive site template by HTML5 UP</p> -->
-      <!--   </div> -->
-      <!-- </div>  -->
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav" class="skel-layers-fixed">
-      <ul>
-        <li><a href="home.html">Home</a></li>					
-        <!-- <li><a href="software.html">Software</a></li> -->
-        <li class="current"><a href="blog.html">Blog</a></li>
-        <!-- <li><a href="about.html">About</a></li>					 -->
-      </ul>
-    </nav>
-
-    <!-- Article Banner -->
-    <div id="article-banner-wrapper" style="background-image: url('../images/golang_rap_background.jpg');">
-      <section id="article-banner">
-        <h2>Ode to Golang</h2>
-        <p>A rap about the best programming language eva</p>
-      </section>
-    </div>
-
-    <!-- Main -->
-    <div id="main-wrapper">
-      <div id="main" class="container">
-      <!-- <div style=" -->
-      <!--   /* background&#45;color: blue; */ -->
-      <!--   width: 100%; -->
-      <!--   height: 100%; -->
-      <!--   position: absolute; -->
-      <!--   top: 0; -->
-      <!--   right: 0; -->
-      <!--   opacity: .88; -->
-      <!--   background&#45;image: url('/css/images/overlay.png'), url('/css/images/overlay.png'), url('images/golang_rap_background.jpg'); -->
-      <!--   background&#45;repeat: repeat, repeat, no&#45;repeat; -->
-      <!--   background&#45;size: auto, auto, cover; -->
-      <!--   /* opacity: .25; */ -->
-      <!--   /* &#45;webkit&#45;filter: blur(1px); */ -->
-      <!-- "></div> -->
-      <div class="row" style="position: relative;">
-          <div class="3u">
-            <div class="sidebar">
-
-              <!-- Sidebar -->
-
-              <!-- Recent Posts -->
-              <section>
-                <h2 class="major"><span>Recent Posts</span></h2>
-                <ul class="divided">
-                  <li>
-                    <article class="box post-summary">
-                      <h3><a href="#">Golang</a></h3>
-                      <ul class="meta">
-                        <li class="icon fa-clock-o">6 hours ago</li>
-                      </ul>
-                    </article>
-                  </li>
-                </ul>
-                <a href="#" class="button alt">older stuff</a>
-              </section>
-
-            </div>
-          </div>
-          <div class="9u skel-cell-important">
-            <div class="content content-right" style="width: 55%;">
-
-              <!-- Content -->
-
-              <article class="box page-content">
-
-                <header>
-                  <h2>Golang</h2>
-                  <!-- <p>Written with a smile not a mean face</p> -->
-                  <ul class="meta">
-                    <li class="icon fa-clock-o">6 hours ago</li>
-                  </ul>
-                </header>
-
-                <!-- <section> -->
-                <!--   <span class="image featured"><img src="images/pic05.jpg" alt="" /></span> -->
-                <!-- </section> -->
-
-                <section>
-                  <p>
-                    <strong>Go</strong> got style it don't need no while<br/>
-                    new and fresh it's so ver-sa-tile<br/>
-                    just one file, fast compile<br/>
-                    beats java like a red-headed step child</br>
-                  </p>
-                  <p>
-                    I'm gonna get and go fix <br/>
-                    cuz go-lang is the fucking shit <br/>
-                    and I'm gonna go blitz on Javascript <br/> 
-                    cuz front end devs think they the shit <br/>
-                  </p>
-                  <p>
-                    Talk real quick about type coercion <br/>
-                    that ain't nuthin but straight perversion <br/>
-                    you can't even handle data conversion <br/>
-                    you probably a bitch, you use subversion <br/>
-                  </p>
-                  <p>
-                    In golang we use go-routines <br/>
-                    they make me dance like billie-jean <br/>
-                    the hotter than hot steam <br/>
-                    beat javascript like tmux on screen <br/>
-                  </p>
-                </section>
-
-              </article>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="container">
-      <div class="row double">
-        <div class="12u">
-          <!-- About -->
-          <section>
-            <h2 class="major"><span>What is this site?</span></h2>
-            <p>
-              A place for fun, learning, laughter and love.<br/>
-              An attempt to resuscitate <strong>creative spirits</strong> that have been sidelined for too damn long.
-            </p>
-          </section>
-        </div>
-      </div>
-      <div class="row double">
-        <div class="12u">
-
-          <!-- Contact -->
-          <section>
-            <h2 class="major"><span>On the Internet</span></h2>
-            <ul class="contact">
-              <!-- <li><a class="icon fa&#45;facebook" href="#"><span class="label">Facebook</span></a></li> -->
-              <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-              <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-              <!-- <li><a class="icon fa&#45;dribbble" href="#"><span class="label">Dribbble</span></a></li> -->
-              <!-- <li><a class="icon fa&#45;google&#45;plus" href="#"><span class="label">Google+</span></a></li> -->
-            </ul>
-          </section>
-
-        </div>
+    <div class="navbar navbar-default" role="navigation" style="background-image: url('css/images/overlay.png')">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>        
+        </button>
+        <!-- <a class="navbar&#45;brand" href="#">Project name</a> -->
       </div>
 
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul class="menu">
-          <li>Template designed by: <a href="http://html5up.net">HTML5 UP</a></li>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">HOME</a></li>
+          <li class="active"><a href="blog.html">BLOG</a></li>
         </ul>
+      </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.navbar-->
+
+
+    <!-- Most recent -->    
+    <h2 class="major" style="margin-top: -5px;"><span>Recent</span></h2>      
+    <div class="featured-article-list">      
+      <!-- Featured article -->
+      <div class="featured-article-row">
+        <a href="#" class="featured-article-image" style="background-image: url('images/golang_rap_background.jpg');" ></a>
+        <div class="featured-article-copy">
+          <h2 class="featured-article-title">Ode to Golang</h2>
+          <p class="featured-article-description">A rap about the best programming language eva.... Go got style it don't need no while</p>
+        </div>
+      </div> <!-- /Featured Article -->    
+    </div> 
+    <!-- /Most recent -->
+
+    <div class="container-fluid">
+      <h2 class="major"><span>Older</span></h2>
+    </div>
+
+    <!-- older articles -->
+    <div class="article-list">
+      <div class="article-row">
+        <div class="article-thumbnail">
+        <a href="#" class="article-thumbnail" style="background-image: url('images/golang_rap_background.jpg');" ></a>
+        </div>
+        <div class="article-copy">
+          <div class="article-title">Ode to Golang</div>
+          <div class="article-description">A rap about the best programming language eva... Go got style it don't need no while</div>
+          <div class="article-date">1 week ago</div>
+        </div>
       </div>
 
-    </footer>
+      <div style="border-bottom: 1px solid rgba(0,0,0,.15); height: 1em; margin-bottom: 1em;"></div>
+
+      <div class="article-row">
+        <div class="article-thumbnail">
+          <a href="#" class="article-thumbnail" style="background-image: url('images/words.jpg');" ></a>
+        </div>
+        <div class="article-copy">
+          <div class="article-title">Words</div>
+          <div class="article-description">A Golang powered blog engine</div>
+          <div class="article-date">2 weeks ago</div>
+        </div>
+      </div>
+    </div>
+    <!-- /older articles -->
+
+    <footer class="container-fluid">
+      <section>
+        <h2 class="major"><span>Elsewhere</span></h2>
+        <a class="fa fa-github fa-3x social-link" href="http://github.com/nuttapp"></a>
+        <a class="fa fa-twitter fa-3x social-link" href="http://twitter.com/nuttapp"></a>
+      </section>
+      <div class="attribution">
+        Design by <a href="http://html5up.net">HTML5 UP</a>
+      </div>
+    </footer> <!-- /footer -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
