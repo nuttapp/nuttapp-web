@@ -5,7 +5,7 @@ Additional base css. See vendor/bootstrap/less/variables.less for the rest
 */
 
 body {
-  min-height: 2000px;
+  // min-height: 2000px;
   // Top padding is b/c of fixed navbar
   // padding-top: 70px;
 }
@@ -21,9 +21,8 @@ body,input,textarea,select
     line-height: 2em;
 }
 
-h1, h2, h3, h4, h5, h6
-{
-    text-transform: uppercase;
+section {
+    margin: 0 0 2.5em 0;
 }
 
 /*
@@ -33,9 +32,8 @@ h2.major
 {
     position: relative;
     border-top: solid 5px #e7eae8;
-    font-size: 1.65em;
+    font-size: 1.35em;
     text-align: center;
-    margin-top: 2.5em;
 
     @media screen {
         @media (max-width: @screen-xs-max) {
@@ -50,7 +48,7 @@ h2.major > span
     background: #fff;
     position: relative;
     display: inline-block;
-    top: -0.775em;
+    top: -0.655em;
     padding: 0 1.5em 0 1.5em;
     background: @body-bg;
 }
@@ -110,7 +108,7 @@ Banner - top full width image
     background-repeat:			repeat,						repeat,						no-repeat;
     background-size:			auto,						auto,						cover;
     z-index: 1;
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
 
     @media screen {
         @media (max-width: @screen-xs-max) {
@@ -195,3 +193,124 @@ Banner - top full width image
     }
 }
 
+/*
+Recent article/blog post styles
+*/
+
+// When on md/lg screeen (>= 768) make width of body content a % of screen width, up to @max-width pixels
+@md-and-lg-width: 85%;
+@max-width: 1100px;
+
+// When on an xs screeen (< 768px) force horizontal padding to 15px;
+@xs-copy-horiz-padding: 15px;
+
+.featured-article-list {
+    margin: 0 auto 1em auto;
+    max-width: @max-width;
+    width: @md-and-lg-width;
+
+    @media screen {
+        @media (max-width: @screen-xs-max) {
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+.featured-article-row {
+}
+
+.featured-article-image {  
+    margin: 0 0 1.1em 0;
+    width: 100%;
+    height: 350px;
+    border: 1px solid rgba(0,0,0,0.15);
+    display: block;
+    background-position: center;
+    background-size: cover;
+    
+    @media screen {
+        @media (max-width: @screen-xs-max) {
+            border: 0px;
+            height: 275px;
+        }
+    }
+}
+
+.featured-article-copy {
+     @media screen {
+        @media (max-width: @screen-xs-max) {
+            padding-left: @xs-copy-horiz-padding;
+            padding-right: @xs-copy-horiz-padding;
+        }
+    }
+}
+
+.featured-article-title {
+    font-family: sans-serif;
+    font-size: 2.75em;
+    font-weight: 300;
+    margin: 10px 0px 5px -2px;
+}
+
+.featured-article-description {
+    font-size: 1.15em;
+    font-weight: 300;
+}
+
+/*
+* Article/blogpost list styles
+*/
+.article-list {
+    margin: 0 auto 1em auto;
+    max-width: @max-width;
+    width: @md-and-lg-width;
+
+    @media screen {
+        @media (max-width: @screen-xs-max) {
+            width: 100%;
+            padding-left: @xs-copy-horiz-padding;
+            padding-right: @xs-copy-horiz-padding;
+        }
+    }
+}
+ 
+.article-row {
+    display: table-row;
+}
+
+.article-thumbnail {
+    display: table-cell;
+    width: 140px;
+    height: 120px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+}
+
+.article-copy {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.article-title {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.article-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: -5px;
+}
+
+.article-date {
+    font-family: "Open Sans", sans-serif;
+    font-size: .75em;
+    font-weight: bold;
+}
