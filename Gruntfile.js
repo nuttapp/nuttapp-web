@@ -1,11 +1,11 @@
 module.exports = function (grunt) {
-  var gruntConfig = {
+    var gruntConfig = {
 
     watch: {
       less: {
         files: ['less/*.less', 'vendor/bootstrap/less/*.less', '*.html'],
         tasks: ['shell:compileBootstrap', 'less:compileSite', 'copy']
-        // tasks: ['less:compileSite', 'copy:bootstrap', 'copy:html']
+        // tasks: ['less:compileSite', 'copy']
       }
     },
 
@@ -16,10 +16,11 @@ module.exports = function (grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: 'site.css.map',
-          sourceMapFilename: 'public/css/site.css.map'
+          sourceMapFilename: 'css/site.css.map'
+          // sourceMapBasePath: 'css'
         },
         files: {
-          'public/css/site.css': 'less/site.less'
+          'css/site.css': 'less/site.less'
         }
       }
     },
@@ -34,7 +35,7 @@ module.exports = function (grunt) {
 
     shell: {
       compileBootstrap: {
-        command: 'grunt --base vendor/bootstrap/ --gruntfile vendor/bootstrap/Gruntfile.js less:compileCore autoprefixer:core csscomb:dist cssmin concat uglify:bootstrap'
+        command: 'grunt --base vendor/bootstrap/ --gruntfile vendor/bootstrap/Gruntfile.js less:compileCore autoprefixer:core csscomb:dist cssmin:minifyCore concat uglify:core'
       }
     },
 
@@ -43,7 +44,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'vendor/bootstrap/dist/css/',
         src: 'bootstrap.*css*',
-        dest: 'public/css/',
+        dest: 'css/',
         filter: 'isFile',
         flatten: true
       },
@@ -51,7 +52,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'vendor/bootstrap/dist/js/',
         src: 'bootstrap.*js*',
-        dest: 'public/js/',
+        dest: 'js/',
         filter: 'isFile',
         flatten: true
       },
@@ -72,9 +73,10 @@ module.exports = function (grunt) {
       }
     }
   };
-
+  
+  require('time-grunt')(grunt);
   grunt.initConfig(gruntConfig);
 
   // load all grunt tasks that are in devDependencies
-  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
+  require('jit-grunt')(grunt);
 };
