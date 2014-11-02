@@ -330,3 +330,68 @@ Recent article/blog post styles
     font-weight: bold;
 }
 
+#article-banner-wrapper
+{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9em 0 9em 0;
+    margin-bottom: 3em;
+}
+
+#article-banner
+{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 4em 0 3.5em 0;
+}
+
+#article-banner h2
+{
+    font-family: "helvetica neue";
+    font-weight: 400;
+    font-size: 3.5em; 
+    color: rgba(251,251,251,1);
+    margin: 0 0 0 0;
+}
+
+#article-banner p
+{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.25em;
+    text-transform: none;
+    color: rgba(240,240,240,1);
+    margin: 0 0 1.25em 0;
+}
+
+.article-body {
+    margin:0 auto 2em auto;
+    width: 700px;
+
+    @media screen {
+        @media (max-width: @screen-xs-max) {
+            width: auto;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+}
+
+.article-text {
+    font-family: "freight-text-pro", Georgia, sans-serif;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,0.8);
+}
+
+.article-text p {
+    margin-bottom: 1em;
+}
