@@ -48,14 +48,6 @@ module.exports = function (grunt) {
         filter: 'isFile',
         flatten: true
       },
-      bootstrap_js: {
-        expand: true,
-        cwd: 'vendor/bootstrap/dist/js/',
-        src: 'bootstrap.*js*',
-        dest: 'js/',
-        filter: 'isFile',
-        flatten: true
-      },
       html: {
         expand: true,
         cwd: './',
