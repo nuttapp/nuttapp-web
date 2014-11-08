@@ -35,7 +35,7 @@ module.exports = function (grunt) {
 
     shell: {
       compileBootstrap: {
-        command: 'grunt --base vendor/bootstrap/ --gruntfile vendor/bootstrap/Gruntfile.js less:compileCore autoprefixer:core csscomb:dist cssmin:minifyCore concat uglify:core'
+        command: 'grunt --base vendor/bootstrap/ --gruntfile vendor/bootstrap/Gruntfile.js less:compileCore autoprefixer:core csscomb:dist cssmin:minifyCore'
       }
     },
 
