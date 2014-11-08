@@ -10,40 +10,33 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="navbar navbar-default" role="navigation" style="background-image: url('css/images/overlay.png')">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>        
-        </button>
-        <!-- <a class="navbar&#45;brand" href="#">Project name</a> -->
+
+    <!-- navbar -->
+    <div class="navbar-wrapper">
+      <div class="navbar-itemgroup">
+        <div class="navbar-item">
+          <a  href="home.html">HOME</a>
+        </div>
+        <div class="navbar-item">
+          <a class="navbar-active" href="blog.html">BLOG</a>
+        </div>
       </div>
+    </div>
+    <!-- /navbar -->
 
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="home.html">HOME</a></li>
-          <li class="active"><a href="blog.html">BLOG</a></li>
-        </ul>
-      </div> <!-- /.navbar-collapse -->
-    </div> <!-- /.navbar-->
-
-
-    <!-- Most recent -->    
+    <!-- most recent -->    
     <h2 class="major" style="margin-top: -5px;"><span>Recent</span></h2>      
     <div class="featured-article-list">      
       <!-- Featured article -->
       <div class="featured-article-row">
-        <a href="ode-to-golang.html" class="featured-article-image" style="background-image: url('images/golang_rap_background.jpg');" ></a>
+        <a href="golang-vs-javascript.html" class="featured-article-image" style="background-image: url('images/golang_rap_background.jpg');" ></a>
         <div class="featured-article-copy">
-          <h2><a href="ode-to-golang.html">Goalng vs Javascript</a></h2>
-          <p><a href="ode-to-golang.html">A rap about the best programming language eva.... Go got style it don't need no while</a></p>
+          <h2><a href="golang-vs-javascript.html">Golang vs Javascript</a></h2>
+          <p><a href="golang-vs-javascript.html">A rap about the best programming language eva.... Go got style it don't need no while</a></p>
         </div>
-      </div> <!-- /Featured Article -->    
+      </div> <!-- /featured article -->    
     </div> 
-    <!-- /Most recent -->
+    <!-- /most recent -->
 
     <div class="container-fluid">
       <h2 class="major"><span>Older</span></h2>
@@ -53,11 +46,11 @@
     <div class="article-list">
       <div class="article-row">
         <div class="article-thumbnail">
-          <a href="ode-to-golang.html" class="article-thumbnail" style="background-image: url('images/golang_rap_background.jpg');" ></a>
+          <a href="golang-vs-javascript.html" class="article-thumbnail" style="background-image: url('images/golang_rap_background.jpg');" ></a>
         </div>
         <div class="article-copy">
-          <h2><a href="ode-to-golang.html">Ode to Golang</a></h2>
-          <p><a href="ode-to-golang.html">A rap about the best programming language eva... Go got style it don't need no while</a></p>
+          <h2><a href="golang-vs-javascript.html">Ode to Golang</a></h2>
+          <p><a href="golang-vs-javascript.html">A rap about the best programming language eva... Go got style it don't need no while</a></p>
           <span class="article-date">1 week ago</span>
         </div>
       </div>
@@ -81,11 +74,10 @@
       <section>
         <h2 class="major"><span>Elsewhere</span></h2>
         <a class="fa fa-github fa-3x social-link" href="http://github.com/nuttapp"></a>
+        <a class="fa fa-tumblr fa-3x social-link" href="http://nuttapp.tumblr.com"></a>
         <a class="fa fa-twitter fa-3x social-link" href="http://twitter.com/nuttapp"></a>
       </section>
     </footer> <!-- /footer -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
