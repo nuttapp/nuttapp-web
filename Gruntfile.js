@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     watch: {
       less: {
         files: ['less/*.less', 'vendor/bootstrap/less/*.less', '*.html'],
-        tasks: ['shell:compileBootstrap', 'less:compileSite', 'copy']
+        tasks: ['shell:compileBootstrap', 'less:compileSite', 'cssmin:minSite', 'copy']
         // tasks: ['less:compileSite', 'copy']
       }
     },
@@ -26,6 +26,11 @@ module.exports = function (grunt) {
     },
 
     cssmin: {
+      minSite: {
+        files: {
+          'css/site.min.css': ['css/site.css']
+        }
+      },
       combine: {
         files: {
         'public/css/site.css': ['path/to/input_one.css', 'path/to/input_two.css']
