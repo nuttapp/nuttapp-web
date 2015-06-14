@@ -1,19 +1,12 @@
 module.exports = function (grunt) {
     var env = grunt.option('env') || 'dev';
     var buildDir = 'builds/' + env;
-    var useLiveReload = true;
-    var port = 9000;
-
-    if (env === 'prod') {
-        useLiveReload = false;
-        port = 9001;
-    }
 
     var gruntConfig = {
 
     watch: {
       options: {
-          livereload: useLiveReload,
+          livereload: true,
           atBegin: true
       },
       bootstrap: {
@@ -22,7 +15,7 @@ module.exports = function (grunt) {
       },
       less: {
         files: ['less/*.less'],
-        tasks: ['clear', 'less:lessDev']
+        tasks: ['clear', 'less']
       },
       html: {
         files: ['*.html'],
@@ -35,29 +28,30 @@ module.exports = function (grunt) {
     },
 
     less: {
-      lessDev: {
+      build: {
         options: {
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: 'site.css.map',
-          sourceMapFilename: buildDir + '/css/site.css.map'
         },
-        files: {
-          'builds/dev/css/site.css': 'less/site.less'
-        }
-      },
-      lessProd: {
-        files: {
-          'builds/prod/css/site.css': 'less/site.less'
-        }
-      }
+        files: [{
+          expand: true,
+          src: 'less/*.less',
+          dest: buildDir + '/css',
+          flatten: true,
+          ext: '.css'
+        }]
+      } 
     },
 
     cssmin: {
       minProd: {
-        files: {
-          'builds/prod/css/site.css': 'builds/prod/css/site.css'
-        }
+        files: [{
+          expand: true,
+          src: buildDir + '/css/*.css',
+          dest: buildDir + '/css',
+          flatten: true,
+          ext: '.css'
+        }]
       }
     },
 
@@ -106,29 +100,27 @@ module.exports = function (grunt) {
     },
    
     clean: {
-        dev: 'builds/dev/*',
-        prod: 'builds/prod/*'
+        buildFiles: buildDir + '/*'
     },
 
     connect: {
       run: {
         options: {
           keepalive: true,
-          port: port,
-          livereload: useLiveReload,
+          port: 9000,
+          livereload: true,
           base: buildDir
         }
       }
     },
 
-    imagemin: {                          // Task 
-      dynamic: {                         // Another target 
-
+    imagemin: {                          
+      dynamic: {                         
         files: [{
-          expand: true,                  // Enable dynamic expansion 
-          cwd: 'images/',                   // Src matches are relative to this path 
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match 
-          dest: 'builds/prod/images/'                  // Destination path prefix 
+          expand: true,                  
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: buildDir + '/images/'
         }]
       }
     }
@@ -138,19 +130,27 @@ module.exports = function (grunt) {
   if (env === 'dev') {
     grunt.registerTask('build', [
         'clear',
-        'clean:dev',
+        'clean',
         'shell:buildBootstrap', 'copy:bootstrap_css_dev',
-        'less:lessDev',
+        'less',
         'copy:html',
         'copy:images', 
         'copy:cssImages'
     ]);
   } else if (env === 'prod') {
+    // disable live reload
+    gruntConfig.watch.options.livereload = false;
+    gruntConfig.connect.run.options.livereload = false;
+    // disable sourcemaps
+    gruntConfig.less.build.options.sourceMap = false;
+    // change connect port
+    gruntConfig.connect.run.options.port = 9001;
+
     grunt.registerTask('build', [
         'clear', 
-        'clean:prod',
+        'clean',
         'shell:buildBootstrap', 'copy:bootstrap_css_prod',
-        'less:lessProd',
+        'less',
         'cssmin:minProd',
         'copy:html',
         'imagemin', 
@@ -161,6 +161,6 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   grunt.initConfig(gruntConfig);
 
-  // load all grunt tasks that are in devDependencies
+  // load all grunt tasks on demand
   require('jit-grunt')(grunt);
 };
