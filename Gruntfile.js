@@ -140,7 +140,6 @@ module.exports = function (grunt) {
     ]);
   } else if (env === 'prod') {
     // disable live reload
-    gruntConfig.watch.options.livereload = false;
     gruntConfig.connect.run.options.livereload = false;
     // disable sourcemaps
     gruntConfig.less.build.options.sourceMap = false;
