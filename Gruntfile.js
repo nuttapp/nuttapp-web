@@ -10,19 +10,19 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         files: ['vendor/bootstrap/less/*.less'],
-        tasks: ['shell:buildBootstrap', 'copy:bootstrap_css_dev']
+        tasks: ['clear', 'shell:buildBootstrap', 'copy:bootstrap_css_dev']
       },
       less: {
         files: ['less/*.less'],
-        tasks: ['less:lessDev']
+        tasks: ['clear', 'less:lessDev']
       },
       html: {
         files: ['*.html'],
-        tasks: ['copy:html']
+        tasks: ['clear', 'copy:html']
       },
       images: {
         files: ['images/*', 'css/images/*'],
-        tasks: ['copy:images', 'copy:cssImages']
+        tasks: ['clear', 'copy:images', 'copy:cssImages']
       }
     },
 
@@ -125,6 +125,7 @@ module.exports = function (grunt) {
 
   if (env === 'dev') {
     grunt.registerTask('build', [
+        'clear',
         'clean:dev',
         'shell:buildBootstrap', 'copy:bootstrap_css_dev',
         'less:lessDev',
@@ -133,6 +134,7 @@ module.exports = function (grunt) {
     ]);
   } else if (env === 'prod') {
     grunt.registerTask('build', [
+        'clear', 
         'clean:prod',
         'shell:buildBootstrap', 'copy:bootstrap_css_prod',
         'less:lessProd',
