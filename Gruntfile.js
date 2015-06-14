@@ -131,7 +131,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clear',
         'clean',
-        'shell:buildBootstrap', 'copy:bootstrap_css_dev',
+        'shell:buildBootstrap', 
+        'copy:bootstrap_css_dev',
         'less',
         'copy:html',
         'copy:images', 
@@ -149,7 +150,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clear', 
         'clean',
-        'shell:buildBootstrap', 'copy:bootstrap_css_prod',
+        'shell:buildBootstrap', 
+        'copy:bootstrap_css_prod',
         'less',
         'cssmin:minProd',
         'copy:html',
