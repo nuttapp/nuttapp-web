@@ -13,7 +13,8 @@ module.exports = function (grunt) {
 
     watch: {
       options: {
-          livereload: useLiveReload
+          livereload: useLiveReload,
+          atBegin: true
       },
       bootstrap: {
         files: ['vendor/bootstrap/less/*.less'],
@@ -77,7 +78,7 @@ module.exports = function (grunt) {
       bootstrap_css_dev: {
         expand: true,
         cwd: 'vendor/bootstrap/dist/css/',
-        src: 'bootstrap.*css*',
+        src: 'bootstrap.css*',
         dest: buildDir + '/css/',
         filter: 'isFile',
         flatten: true
