@@ -103,12 +103,20 @@ module.exports = function (grunt) {
     },
 
     connect: {
-      blog: {
+      dev: {
         options: {
           keepalive: true,
           port: 9000,
           livereload: true,
-          base: buildDir
+          base: "builds/dev/"
+        }
+      },
+      prod: {
+        options: {
+          keepalive: true,
+          port: 9001,
+          livereload: false,
+          base: "builds/prod/"
         }
       }
     }
