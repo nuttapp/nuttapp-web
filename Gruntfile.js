@@ -1,12 +1,19 @@
 module.exports = function (grunt) {
     var env = grunt.option('env') || 'dev';
     var buildDir = 'builds/' + env;
+    var useLiveReload = true;
+    var port = 9000;
+
+    if (env === 'prod') {
+        useLiveReload = true;
+        port = 9001;
+    }
 
     var gruntConfig = {
 
     watch: {
       options: {
-          livereload: true
+          livereload: useLiveReload
       },
       bootstrap: {
         files: ['vendor/bootstrap/less/*.less'],
@@ -103,20 +110,12 @@ module.exports = function (grunt) {
     },
 
     connect: {
-      dev: {
+      run: {
         options: {
           keepalive: true,
-          port: 9000,
-          livereload: true,
-          base: "builds/dev/"
-        }
-      },
-      prod: {
-        options: {
-          keepalive: true,
-          port: 9001,
-          livereload: false,
-          base: "builds/prod/"
+          port: port,
+          livereload: useLiveReload,
+          base: buildDir
         }
       }
     }
