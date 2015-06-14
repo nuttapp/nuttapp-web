@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     var port = 9000;
 
     if (env === 'prod') {
-        useLiveReload = true;
+        useLiveReload = false;
         port = 9001;
     }
 
@@ -118,6 +118,18 @@ module.exports = function (grunt) {
           base: buildDir
         }
       }
+    },
+
+    imagemin: {                          // Task 
+      dynamic: {                         // Another target 
+
+        files: [{
+          expand: true,                  // Enable dynamic expansion 
+          cwd: 'images/',                   // Src matches are relative to this path 
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match 
+          dest: 'builds/prod/images/'                  // Destination path prefix 
+        }]
+      }
     }
 
   };
@@ -129,7 +141,8 @@ module.exports = function (grunt) {
         'shell:buildBootstrap', 'copy:bootstrap_css_dev',
         'less:lessDev',
         'copy:html',
-        'copy:images', 'copy:cssImages'
+        'copy:images', 
+        'copy:cssImages'
     ]);
   } else if (env === 'prod') {
     grunt.registerTask('build', [
@@ -139,7 +152,8 @@ module.exports = function (grunt) {
         'less:lessProd',
         'cssmin:minProd',
         'copy:html',
-        'copy:images', 'copy:cssImages'
+        'imagemin', 
+        'copy:cssImages'
     ]);
   }
 
