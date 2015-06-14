@@ -5,6 +5,9 @@ module.exports = function (grunt) {
     var gruntConfig = {
 
     watch: {
+      options: {
+          livereload: true
+      },
       bootstrap: {
         files: ['vendor/bootstrap/less/*.less'],
         tasks: ['shell:buildBootstrap', 'copy:bootstrap_css_dev']
@@ -97,7 +100,19 @@ module.exports = function (grunt) {
     clean: {
         dev: 'builds/dev/*',
         prod: 'builds/prod/*'
-    } 
+    },
+
+    connect: {
+      blog: {
+        options: {
+          keepalive: true,
+          port: 9000,
+          livereload: true,
+          base: buildDir
+        }
+      }
+    }
+
   };
 
   if (env === 'dev') {
