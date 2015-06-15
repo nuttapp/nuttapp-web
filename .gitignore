@@ -1,6 +1,7 @@
 # Folders to ignore
 node_modules
 bower_components
+builds
 
 # OS
 .DS_Store
